@@ -24,7 +24,7 @@ export function Skills() {
         <p className="mx-auto -mt-6 mb-12 max-w-2xl text-center text-white/60">
           Click a planet to inspect its stack.
         </p>
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 place-items-center">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 place-items-center">
           {PLANETS.map((p, i) => (
             <motion.button
               key={p.name}
@@ -40,18 +40,19 @@ export function Skills() {
                 <div
                   className="rounded-full"
                   style={{
-                    width: p.size, height: p.size,
+                    width: `clamp(100px, 28vw, ${p.size}px)`,
+                    height: `clamp(100px, 28vw, ${p.size}px)`,
                     background: `radial-gradient(circle at 30% 30%, #fff2, transparent 40%), radial-gradient(circle at 70% 70%, ${p.color}, #0a0a2e 70%)`,
                     boxShadow: `0 0 40px ${p.color}80, inset -10px -20px 40px #000a`,
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center rounded-full">
-                  <div className="animate-spin-slow rounded-full" style={{ width: p.size + 30, height: p.size + 30, border: `1px dashed ${p.ring}80`, transform: "rotateX(72deg)" }} />
+                  <div className="animate-spin-slow rounded-full" style={{ width: `calc(clamp(100px, 28vw, ${p.size}px) + 30px)`, height: `calc(clamp(100px, 28vw, ${p.size}px) + 30px)`, border: `1px dashed ${p.ring}80`, transform: "rotateX(72deg)" }} />
                 </div>
                 <div className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity group-hover:opacity-100"
                      style={{ boxShadow: `0 0 60px ${p.ring}` }} />
               </div>
-              <div className="font-display text-sm font-bold tracking-wider text-white">{p.name}</div>
+              <div className="font-display text-[11px] font-bold tracking-wider text-white sm:text-sm">{p.name}</div>
               <div className="font-mono text-[10px] uppercase text-white/50">{p.items.length} techs</div>
             </motion.button>
           ))}

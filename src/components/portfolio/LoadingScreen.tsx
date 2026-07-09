@@ -45,9 +45,9 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
           style={{ background: "radial-gradient(ellipse at center, #0a0a2e, #050816 70%, #000)" }}
         >
           <div className="grid-bg absolute inset-0 opacity-30" />
-          <div className="relative flex flex-col items-center gap-8 px-6 text-center">
+          <div className="relative flex flex-col items-center gap-6 px-4 text-center sm:gap-8 sm:px-6">
             {/* Orbiting rings */}
-            <div className="relative h-40 w-40">
+            <div className="relative h-32 w-32 sm:h-40 sm:w-40">
               <div className="absolute inset-0 rounded-full border-2 border-transparent animate-spin-slow"
                    style={{ borderTopColor: "#7C3AED", borderRightColor: "#06B6D4" }} />
               <div className="absolute inset-3 rounded-full border-2 border-transparent"
@@ -58,12 +58,12 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
                    style={{ textShadow: "0 0 20px #7C3AED" }}>SM</div>
             </div>
 
-            <div className="font-display text-3xl md:text-5xl font-bold tracking-widest text-gradient animate-gradient"
+            <div className="font-display text-2xl font-bold tracking-widest text-gradient animate-gradient sm:text-3xl md:text-5xl"
                  style={{ backgroundImage: "var(--gradient-primary)" }}>
               SONIA OS
             </div>
 
-            <div className="h-6 min-w-[280px]">
+            <div className="h-6 min-w-0 max-w-[90vw] sm:min-w-[280px]">
               <motion.div
                 key={step}
                 initial={{ opacity: 0, y: 6 }}
@@ -75,7 +75,7 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
               </motion.div>
             </div>
 
-            <div className="relative h-1 w-[300px] overflow-hidden rounded-full bg-white/10">
+            <div className="relative h-1 w-[80vw] max-w-[300px] overflow-hidden rounded-full bg-white/10">
               <motion.div
                 className="h-full"
                 style={{ background: "linear-gradient(90deg, #7C3AED, #06B6D4, #EC4899)", width: `${progress * 100}%` }}

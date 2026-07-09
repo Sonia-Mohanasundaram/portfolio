@@ -44,7 +44,7 @@ export function AIAssistant() {
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         aria-label="AI Assistant"
-        className="fixed bottom-24 right-5 z-40 h-14 w-14 overflow-hidden rounded-full aurora-border animate-pulse-glow"
+        className="fixed bottom-4 right-4 z-40 h-12 w-12 overflow-hidden rounded-full aurora-border animate-pulse-glow sm:bottom-24 sm:right-5 sm:h-14 sm:w-14"
         style={{ boxShadow: "var(--glow-purple)" }}
       >
         <img src={avatar} alt="Sonia AI" className="h-full w-full object-cover" style={{ objectPosition: "50% 20%" }} />
@@ -57,7 +57,7 @@ export function AIAssistant() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-44 right-5 z-40 flex h-[460px] w-[340px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-3xl glass-strong aurora-border"
+            className="fixed bottom-20 right-4 z-40 flex h-[min(460px,calc(100vh-7rem))] w-[min(340px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl glass-strong aurora-border sm:bottom-44 sm:right-5 sm:h-[460px] sm:w-[340px]"
           >
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <div className="flex items-center gap-2">
@@ -92,7 +92,7 @@ export function AIAssistant() {
                   onKeyDown={(e) => { if (e.key === "Enter") send(input); }}
                   placeholder="Ask about Sonia..."
                   maxLength={200}
-                  className="flex-1 rounded-full glass bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none"
+                    className="flex-1 rounded-full glass bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none"
                 />
                 <button onClick={() => send(input)} className="grid h-9 w-9 place-items-center rounded-full"
                         style={{ background: "linear-gradient(135deg,#7C3AED,#06B6D4)", boxShadow: "var(--glow-purple)" }}>

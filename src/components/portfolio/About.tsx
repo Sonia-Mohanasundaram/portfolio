@@ -54,7 +54,7 @@ export function About() {
                   clean interfaces, and human curiosity — turning research into products people
                   actually love to use.
                 </p>
-                <div className="mt-6 grid grid-cols-3 gap-3">
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
                   <Stat n="8+" label="Projects" />
                   <Stat n="4" label="Hackathons" />
                   <Stat n="13+" label="Certifications along with College Tech events" />
@@ -71,8 +71,8 @@ export function About() {
 function Stat({ n, label }: { n: string; label: string }) {
   return (
     <div className="rounded-xl glass px-3 py-3 text-center">
-      <div className="font-display text-2xl font-black text-gradient" style={{ backgroundImage: "linear-gradient(135deg,#EC4899,#06B6D4)" }}>{n}</div>
-      <div className="mt-1 font-mono text-[10px] uppercase tracking-widest text-white/60">{label}</div>
+      <div className="font-display text-xl font-black text-gradient sm:text-2xl" style={{ backgroundImage: "linear-gradient(135deg,#EC4899,#06B6D4)" }}>{n}</div>
+      <div className="mt-1 font-mono text-[9px] uppercase tracking-widest text-white/60 sm:text-[10px]">{label}</div>
     </div>
   );
 }
@@ -80,8 +80,8 @@ function Stat({ n, label }: { n: string; label: string }) {
 export function SectionTitle({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div className="mb-10 text-center">
-      <div className="font-mono text-xs uppercase tracking-[0.4em] text-cyan-300/80">{eyebrow}</div>
-      <h2 className="mt-2 font-display text-4xl md:text-5xl font-black text-gradient" style={{ backgroundImage: "linear-gradient(90deg,#EC4899,#7C3AED,#06B6D4)" }}>
+      <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-300/80 sm:text-xs sm:tracking-[0.4em]">{eyebrow}</div>
+      <h2 className="mt-2 font-display text-3xl font-black text-gradient sm:text-4xl md:text-5xl" style={{ backgroundImage: "linear-gradient(90deg,#EC4899,#7C3AED,#06B6D4)" }}>
         {title}
       </h2>
       <div className="mx-auto mt-3 h-[2px] w-24 rounded-full" style={{ background: "linear-gradient(90deg, transparent, #7C3AED, #06B6D4, transparent)" }} />

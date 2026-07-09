@@ -121,7 +121,7 @@ export function Contact() {
             </form>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {LINKS.map(({ Icon, label, value, href, color }, i) => (
               <motion.a
                 key={label}
@@ -153,7 +153,7 @@ export function Contact() {
             <div className="font-mono text-xs uppercase tracking-widest text-cyan-300">// Location</div>
             <div className="font-mono text-xs text-white/60">Namakkal • Tamil Nadu • India</div>
           </div>
-          <div className="relative h-72">
+          <div className="relative h-56 sm:h-64 md:h-72">
             <iframe
               title="Namakkal, Tamil Nadu, India"
               src="https://www.google.com/maps?q=Namakkal,%20Tamil%20Nadu,%20India&z=11&output=embed"
