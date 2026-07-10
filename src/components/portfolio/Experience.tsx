@@ -24,7 +24,7 @@ export function Experience() {
     <section id="experience" className="relative px-4 py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle eyebrow="// 04 TIMELINE" title="Experience & Journey" />
-        <div className="relative">
+     <div className="relative">
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] -translate-x-1/2"
                style={{ background: "linear-gradient(180deg, transparent, #7C3AED, #06B6D4, #EC4899, transparent)", boxShadow: "0 0 20px #7C3AED" }} />
 
@@ -59,7 +59,7 @@ function TimelineGroup({ icon: Icon, title, items, align }: { icon: Icn; title: 
           >
             <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-4 w-4 rounded-full"
                  style={{ background: "radial-gradient(#fff, #06B6D4)", boxShadow: "0 0 20px #06B6D4" }} />
-            <div className={`glass-strong aurora-border w-full rounded-2xl p-5 md:w-[46%] ${align === "right" ? "md:ml-auto" : ""}`}>
+            <div className={`glass-strong aurora-border relative w-full overflow-hidden rounded-2xl p-5 md:w-[46%] ${align === "right" ? "md:ml-auto" : ""}`}>
               <div className="font-display text-lg font-bold text-white">{it.head}</div>
               {it.sub && <div className="mt-0.5 font-mono text-xs uppercase tracking-widest text-cyan-300">{it.sub}</div>}
               {it.tag && <div className="mt-2 text-sm text-white/75">{it.tag}</div>}

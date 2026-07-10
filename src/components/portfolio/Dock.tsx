@@ -52,7 +52,7 @@ export function Dock() {
           transition={{ type: "spring", stiffness: 220, damping: 24 }}
           className="fixed bottom-5 left-1/2 z-50 -translate-x-1/2"
         >
-          <div className="glass-strong flex items-center gap-1 rounded-2xl px-2 py-2 aurora-border" style={{ borderRadius: 22 }}>
+          <div className="glass-strong flex items-center gap-1 rounded-2xl px-2 py-2 border border-white/10" style={{ borderRadius: 22 }}>
             {ITEMS.map(({ id, label, Icon }) => {
               const isActive = active === id;
               return (

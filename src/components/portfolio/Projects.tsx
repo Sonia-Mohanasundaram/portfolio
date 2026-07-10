@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, X, Sparkles } from "lucide-react";
 import aiOutreachImg from "@/assets/ai-outreach.png";
 import aiVendorImg from "@/assets/ai-vendor-img.png";
+import aiInterviewImg from "@/assets/ai-interview-simulator.png";
 import smartFlashcardsImg from "@/assets/smart-flashcards.png";
 import hospitalAppointmentImg from "@/assets/hospital-appointment.png";
+import greenChilliImg from "@/assets/chilli.JPG";
 import { SectionTitle } from "./About";
-
-const greenChilliImg = new URL("../../assets/chilli.JPG", import.meta.url).href;
 
 type Project = {
   title: string; blurb: string; tech: string[]; features: string[];
@@ -61,7 +61,7 @@ const PROJECTS: Project[] = [
     tech: ["React", "FastAPI", "MongoDB"],
     features: ["Role-based auth", "Live availability", "Automated reminders", "Admin analytics"],
     gradient: "linear-gradient(135deg,#f472b6,#7C3AED)",
-    github: "https://github.com/Sonia-Mohanasundaram",
+    github: "https://github.com/Sonia-Mohanasundaram/SSN-Hopital.git",
     demo: "https://ssn-hospital.in",
   },
 ];
@@ -165,8 +165,14 @@ function ProjectCard({ p, i, onOpen }: { p: Project; i: number; onOpen: () => vo
         className="aurora-border group relative cursor-pointer overflow-hidden rounded-2xl glass-strong p-5"
         style={{ transformStyle: "preserve-3d", transition: "transform 0.15s ease-out" }}
       >
-        <div className="mb-4 h-32 overflow-hidden rounded-xl" style={{ background: p.gradient }}>
-          {p.title === "AI Vendor Selection" ? (
+        <div className="mb-4 relative h-32 overflow-hidden rounded-xl" style={{ background: p.gradient }}>
+          <div
+            className="pointer-events-none absolute right-3 top-3 h-7 w-7 rounded-lg border border-white/20 animate-spin-slow"
+            style={{ boxShadow: `0 0 16px ${p.gradient.includes("#22d3ee") ? "rgba(6,182,212,0.35)" : "rgba(124,58,237,0.28)"}, inset 0 0 12px rgba(255,255,255,0.08)` }}
+          />
+          {p.title === "AI Interview Simulator" ? (
+            <img src={aiInterviewImg} alt={p.title} className="h-full w-full object-cover" style={{ objectPosition: "50% 80%" }} />
+          ) : p.title === "AI Vendor Selection" ? (
             <img src={aiVendorImg} alt={p.title} className="h-full w-full object-cover object-center" />
           ) : p.title === "Intelligent Flashcards" ? (
             <img src={smartFlashcardsImg} alt={p.title} className="h-full w-full object-cover object-center" />

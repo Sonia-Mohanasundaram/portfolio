@@ -133,7 +133,7 @@ export function Contact() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04 }}
                 whileHover={{ y: -4 }}
-                className="aurora-border group glass-strong flex items-start gap-3 rounded-2xl p-4"
+                  className="aurora-border group glass-strong relative flex items-start gap-3 overflow-hidden rounded-2xl p-4"
               >
                 <div className="grid h-11 w-11 flex-none place-items-center rounded-xl transition-transform group-hover:scale-110"
                      style={{ background: `linear-gradient(135deg, ${color}, ${color}80)`, boxShadow: `0 0 20px ${color}80` }}>

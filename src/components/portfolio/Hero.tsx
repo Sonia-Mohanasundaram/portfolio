@@ -162,7 +162,7 @@ export function Hero() {
                 width={520}
                 height={520}
                 className="h-full w-full object-cover"
-                style={{ objectPosition: "50% 20%" }}
+                style={{ objectPosition: "50% 15%" }}
               />
               <div className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 40%, rgba(5,8,22,0.55) 100%)" }} />
             </motion.div>

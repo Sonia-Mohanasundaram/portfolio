@@ -47,7 +47,7 @@ export function AIAssistant() {
         className="fixed bottom-4 right-4 z-40 h-12 w-12 overflow-hidden rounded-full aurora-border animate-pulse-glow sm:bottom-24 sm:right-5 sm:h-14 sm:w-14"
         style={{ boxShadow: "var(--glow-purple)" }}
       >
-        <img src={avatar} alt="Sonia AI" className="h-full w-full object-cover" style={{ objectPosition: "50% 20%" }} />
+        <img src={avatar} alt="Sonia AI" className="h-full w-full object-cover" style={{ objectPosition: "50% 15%" }} />
         <span className="absolute -top-1 -right-1 grid h-5 w-5 place-items-center rounded-full bg-green-500 text-[9px] font-bold text-white ring-2 ring-black">AI</span>
       </motion.button>
 
