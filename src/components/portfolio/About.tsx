@@ -12,7 +12,7 @@ const TRAITS = [
 
 export function About() {
   return (
-    <section id="about" className="relative px-4 py-24">
+    <section id="about" className="relative px-3 sm:px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle eyebrow="// 01 IDENTITY" title="About Me" />
         <motion.div
@@ -22,7 +22,7 @@ export function About() {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="aurora-border animate-float glass-strong relative overflow-hidden rounded-3xl p-8 md:p-12"
+          <div className="aurora-border animate-float glass-strong relative overflow-hidden rounded-3xl p-5 sm:p-8 md:p-12"
                style={{ boxShadow: "0 30px 80px -30px rgba(124,58,237,0.6)" }}>
             <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full blur-3xl" style={{ background: "radial-gradient(#7C3AED, transparent 70%)" }} />
             <div className="pointer-events-none absolute -left-20 -bottom-20 h-64 w-64 rounded-full blur-3xl" style={{ background: "radial-gradient(#06B6D4, transparent 70%)" }} />
@@ -45,10 +45,10 @@ export function About() {
                 ))}
               </div>
               <div className="flex flex-col justify-center">
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-white">
+                <h3 className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-white">
                   Building the future — one line of code at a time.
                 </h3>
-                <p className="mt-4 text-white/75 leading-relaxed">
+                <p className="mt-4 text-xs sm:text-sm text-white/75 leading-relaxed">
                   Passionate about creating intelligent software using Artificial Intelligence
                   and modern web technologies. I love the intersection of machine learning,
                   clean interfaces, and human curiosity — turning research into products people

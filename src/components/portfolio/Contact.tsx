@@ -71,7 +71,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative px-4 py-24">
+    <section id="contact" className="relative px-3 sm:px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle eyebrow="// 07 TRANSMIT" title="Let's Build Something Amazing 🚀" />
         <p className="mx-auto -mt-6 mb-12 max-w-2xl text-center text-white/70">

@@ -4,7 +4,7 @@ import { SectionTitle } from "./About";
 
 export function Education() {
   return (
-    <section id="education" className="relative px-4 py-24">
+    <section id="education" className="relative px-3 sm:px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-4xl">
         <SectionTitle eyebrow="// 06 KNOWLEDGE" title="Education" />
         <motion.div

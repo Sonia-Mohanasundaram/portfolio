@@ -69,7 +69,7 @@ const PROJECTS: Project[] = [
 export function Projects() {
   const [open, setOpen] = useState<Project | null>(null);
   return (
-    <section id="projects" className="relative px-4 py-24">
+    <section id="projects" className="relative px-3 sm:px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <SectionTitle eyebrow="// 03 CASE FILES" title="Projects" />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -162,10 +162,10 @@ function ProjectCard({ p, i, onOpen }: { p: Project; i: number; onOpen: () => vo
         onMouseMove={onMove}
         onMouseLeave={onLeave}
         onClick={onOpen}
-        className="aurora-border group relative cursor-pointer overflow-hidden rounded-2xl glass-strong p-5"
+        className="aurora-border group relative cursor-pointer overflow-hidden rounded-2xl glass-strong p-3 sm:p-5"
         style={{ transformStyle: "preserve-3d", transition: "transform 0.15s ease-out" }}
       >
-        <div className="mb-4 relative h-32 overflow-hidden rounded-xl" style={{ background: p.gradient }}>
+        <div className="mb-4 relative h-24 sm:h-32 overflow-hidden rounded-xl" style={{ background: p.gradient }}>
           <div
             className="pointer-events-none absolute right-3 top-3 h-7 w-7 rounded-lg border border-white/20 animate-spin-slow"
             style={{ boxShadow: `0 0 16px ${p.gradient.includes("#22d3ee") ? "rgba(6,182,212,0.35)" : "rgba(124,58,237,0.28)"}, inset 0 0 12px rgba(255,255,255,0.08)` }}
@@ -186,13 +186,13 @@ function ProjectCard({ p, i, onOpen }: { p: Project; i: number; onOpen: () => vo
             <div className="h-full w-full grid-bg opacity-40" />
           )}
         </div>
-        <h3 className="font-display text-lg font-bold text-white">{p.title}</h3>
-        <p className="mt-1 line-clamp-2 text-sm text-white/70">{p.blurb}</p>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {p.tech.slice(0, 4).map((t) => (
-            <span key={t} className="rounded-full glass px-2 py-0.5 font-mono text-[10px] text-cyan-200">{t}</span>
+        <h3 className="font-display text-base sm:text-lg font-bold text-white line-clamp-2">{p.title}</h3>
+        <p className="mt-1 line-clamp-2 text-xs sm:text-sm text-white/70">{p.blurb}</p>
+        <div className="mt-3 flex flex-wrap gap-1">
+          {p.tech.slice(0, 3).map((t) => (
+            <span key={t} className="rounded-full glass px-2 py-0.5 font-mono text-[9px] sm:text-[10px] text-cyan-200">{t}</span>
           ))}
-          {p.tech.length > 4 && <span className="rounded-full glass px-2 py-0.5 font-mono text-[10px] text-white/70">+{p.tech.length - 4}</span>}
+          {p.tech.length > 3 && <span className="rounded-full glass px-2 py-0.5 font-mono text-[9px] sm:text-[10px] text-white/70">+{p.tech.length - 3}</span>}
         </div>
       </div>
     </motion.div>

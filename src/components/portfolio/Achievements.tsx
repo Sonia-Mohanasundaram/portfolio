@@ -13,7 +13,7 @@ const ITEMS = [
 
 export function Achievements() {
   return (
-    <section id="achievements" className="relative px-4 py-24">
+    <section id="achievements" className="relative px-3 sm:px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionTitle eyebrow="// 05 TROPHIES" title="Achievements" />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

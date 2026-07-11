@@ -18,7 +18,7 @@ const PLANETS: Planet[] = [
 export function Skills() {
   const [open, setOpen] = useState<Planet | null>(null);
   return (
-    <section id="skills" className="relative px-4 py-24">
+    <section id="skills" className="relative px-3 sm:px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <SectionTitle eyebrow="// 02 CAPABILITIES" title="Skill Galaxy" />
         <p className="mx-auto -mt-6 mb-12 max-w-2xl text-center text-white/60">
